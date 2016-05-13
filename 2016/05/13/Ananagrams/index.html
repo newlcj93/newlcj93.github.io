@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>Ananagrams | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="反片语(Ananagrams)
+输入一些单词，找出所有满足如下条件的单词：该单词不能通过字母重排，得到输入文本中的另外一个单词。在判断是否满足条件时，字母不分大小写，但在输出时应保留输入中的大小写，按字典进行排序（所有大写字母在所有小写字母的前面）。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ananagrams">
+<meta property="og:url" content="http://yoursite.com/2016/05/13/Ananagrams/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="反片语(Ananagrams)
+输入一些单词，找出所有满足如下条件的单词：该单词不能通过字母重排，得到输入文本中的另外一个单词。在判断是否满足条件时，字母不分大小写，但在输出时应保留输入中的大小写，按字典进行排序（所有大写字母在所有小写字母的前面）。">
+<meta property="og:updated_time" content="2016-05-13T09:42:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ananagrams">
+<meta name="twitter:description" content="反片语(Ananagrams)
+输入一些单词，找出所有满足如下条件的单词：该单词不能通过字母重排，得到输入文本中的另外一个单词。在判断是否满足条件时，字母不分大小写，但在输出时应保留输入中的大小写，按字典进行排序（所有大写字母在所有小写字母的前面）。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/PAT甲级/" style="font-size: 20px;">PAT甲级</a> <a href="/tags/UVa/" style="font-size: 20px;">UVa</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-Ananagrams" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/13/Ananagrams/" class="article-date">
+  	<time datetime="2016-05-13T09:14:19.000Z" itemprop="datePublished">2016-05-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ananagrams
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UVa/">UVa</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="&#x53CD;&#x7247;&#x8BED;ananagrams"><a href="#&#x53CD;&#x7247;&#x8BED;-Ananagrams" class="headerlink" title="&#x53CD;&#x7247;&#x8BED;(Ananagrams)"></a>&#x53CD;&#x7247;&#x8BED;(Ananagrams)</h1><blockquote>
+<p>&#x8F93;&#x5165;&#x4E00;&#x4E9B;&#x5355;&#x8BCD;&#xFF0C;&#x627E;&#x51FA;&#x6240;&#x6709;&#x6EE1;&#x8DB3;&#x5982;&#x4E0B;&#x6761;&#x4EF6;&#x7684;&#x5355;&#x8BCD;&#xFF1A;&#x8BE5;&#x5355;&#x8BCD;&#x4E0D;&#x80FD;&#x901A;&#x8FC7;&#x5B57;&#x6BCD;&#x91CD;&#x6392;&#xFF0C;&#x5F97;&#x5230;&#x8F93;&#x5165;&#x6587;&#x672C;&#x4E2D;&#x7684;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#x3002;&#x5728;&#x5224;&#x65AD;&#x662F;&#x5426;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65F6;&#xFF0C;&#x5B57;&#x6BCD;&#x4E0D;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF0C;<br>&#x4F46;&#x5728;&#x8F93;&#x51FA;&#x65F6;&#x5E94;&#x4FDD;&#x7559;&#x8F93;&#x5165;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x5199;&#xFF0C;&#x6309;&#x5B57;&#x5178;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF08;&#x6240;&#x6709;&#x5927;&#x5199;&#x5B57;&#x6BCD;&#x5728;&#x6240;&#x6709;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x7684;&#x524D;&#x9762;&#xFF09;&#x3002;<br><a id="more"></a><br><strong>&#x6837;&#x4F8B;&#x8F93;&#x5165;</strong>&#xFF1A;<br>ladder came tape soon leader acme RIDE lone Dreis peat<br>ScAlE orb eye Rides dealer NotE derail LaCeS drIed<br>noel dire Disk mace Rob dries<br>#</p>
+<p><strong>&#x6837;&#x4F8B;&#x8F93;&#x51FA;</strong>&#xFF1A;<br>Disk<br>NotE<br>derail<br>drIed<br>eye<br>ladder<br>soon</p>
+</blockquote>
+<p><strong>&#x5206;&#x6790;</strong><br>    &#x628A;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x201C;&#x6807;&#x51C6;&#x5316;&#x201D;&#xFF0C;&#x5373;&#x5168;&#x90E8;&#x8F6C;&#x5316;&#x4E3A;&#x5C0F;&#x5199;&#x5B57;&#x6BCD;&#x540E;&#x518D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x653E;&#x5230;map&#x4E2D;&#x8FDB;&#x884C;&#x7EDF;&#x8BA1;&#x3002;map&#x6620;&#x5C04;&#x4E0D;&#x542B;&#x76F8;&#x540C;&#x7684;&#x952E;&#x503C;&#xFF0C;&#x5176;&#x4E2D;map&#x8FD8;&#x5305;&#x542B;&#x4E00;&#x4E2A;count&#x65B9;&#x6CD5;&#xFF1A;&#x7528;&#x4E8E;&#x5224;&#x65AD;map&#x4E2D;&#x662F;&#x5426;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x952E;&#x503C;key&#xFF0C;&#x5982;&#x679C;map&#x4E2D;&#x542B;&#x6709;&#x5219;&#x8FD4;&#x56DE;1&#xFF0C;&#x6CA1;&#x6709;&#x5219;&#x8FD4;&#x56DE;0.</p>
+<hr>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; words;</span><br><span class="line"><span class="built_in">map</span>&lt;<span class="built_in">string</span>, <span class="keyword">int</span>&gt; cnt;</span><br><span class="line"><span class="comment">//&#x5C06;&#x5355;&#x8BCD;s&#x8FDB;&#x884C;&#x201C;&#x6807;&#x51C6;&#x5316;&#x201D;</span></span><br><span class="line"><span class="function"><span class="built_in">string</span> <span class="title">repr</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span> s)</span> </span>{</span><br><span class="line">    <span class="built_in">string</span> ans = s;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans.length(); i++)</span><br><span class="line">    ans[i] = <span class="built_in">tolower</span>(ans[i]);</span><br><span class="line">    sort(ans.begin(), ans.end());</span><br><span class="line">    return ans;</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>{</span><br><span class="line"><span class="built_in">string</span> s;</span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; s &amp;&amp; s[<span class="number">0</span>] != <span class="string">&apos;#&apos;</span>) {</span><br><span class="line">    words.push_back(s);</span><br><span class="line">    <span class="built_in">string</span> r = repr(s);</span><br><span class="line">    <span class="comment">//&#x5224;&#x65AD;map&#x4E2D;&#x662F;&#x5426;&#x5DF2;&#x542B;&#x6709;r&#x8FD9;&#x4E2A;key&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5219;&#x5C06;&#x65B0;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x52A0;&#x5165;&#x5230;map&#x4E2D;</span></span><br><span class="line">    <span class="keyword">if</span> (!cnt.count(r)) cnt[r] = <span class="number">0</span>;</span><br><span class="line">       cnt[r]++;</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; ans;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; words.size(); i++) {</span><br><span class="line">        <span class="keyword">if</span> (cnt[repr(words[i])] == <span class="number">1</span>) ans.push_back(words[i]);</span><br><span class="line">    }</span><br><span class="line">    sort(ans.begin(), ans.end());</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; ans.size(); i++){</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; ans[i] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    }</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/13/The-SetStack-Computer/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">The SetStack Computer</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Ananagrams" data-title="Ananagrams" data-url="http://yoursite.com/2016/05/13/Ananagrams/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
