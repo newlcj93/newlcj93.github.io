@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Database | luchujie&#39;s Blog</title>
+  <title>Rails | luchujie&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一个m(">
+  <meta name="description" content="给定一个不变的入栈的顺序1～n，然后再给出一个序列问是否是一个满足条件的出栈顺序。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database">
-<meta property="og:url" content="http://yoursite.com/2016/05/15/Database/index.html">
+<meta property="og:title" content="Rails">
+<meta property="og:url" content="http://yoursite.com/2016/05/15/Rails/index.html">
 <meta property="og:site_name" content="luchujie's Blog">
-<meta property="og:description" content="一个m(">
-<meta property="og:updated_time" content="2016-05-15T10:35:15.000Z">
+<meta property="og:description" content="给定一个不变的入栈的顺序1～n，然后再给出一个序列问是否是一个满足条件的出栈顺序。">
+<meta property="og:updated_time" content="2016-05-15T14:46:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Database">
-<meta name="twitter:description" content="一个m(">
+<meta name="twitter:title" content="Rails">
+<meta name="twitter:description" content="给定一个不变的入栈的顺序1～n，然后再给出一个序列问是否是一个满足条件的出栈顺序。">
   
   
     <link rel="icon" href="/favicon.png">
@@ -149,11 +149,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Database" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Rails" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/15/Database/" class="article-date">
-  	<time datetime="2016-05-15T10:29:04.000Z" itemprop="datePublished">2016-05-15</time>
+      <a href="/2016/05/15/Rails/" class="article-date">
+  	<time datetime="2016-05-15T14:42:33.000Z" itemprop="datePublished">2016-05-15</time>
 </a>
     </div>
   
@@ -166,7 +166,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Database
+      Rails
     </h1>
   
 
@@ -187,10 +187,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>&#x4E00;&#x4E2A;m(<10000)行n(<10)列的数据库问是否存在两个不同行r1, r2和两个不同列c1,c2。(r1,="" c2)和(r2,="" c2)相等。="" <a="" id="more"></10000)行n(<10)列的数据库问是否存在两个不同行r1,></p>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x4E0D;&#x53D8;&#x7684;&#x5165;&#x6808;&#x7684;&#x987A;&#x5E8F;1&#xFF5E;n&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x95EE;&#x662F;&#x5426;&#x662F;&#x4E00;&#x4E2A;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x7684;&#x51FA;&#x6808;&#x987A;&#x5E8F;&#x3002;<br><a id="more"></a></p>
 </blockquote>
 <hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cstdio&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include&lt;map&gt;</span><br><span class="line">#include&lt;vector&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxr=1000+50;</span><br><span class="line">const int maxc=10+5;</span><br><span class="line">typedef pair&lt;int, int&gt;p2;</span><br><span class="line">map&lt;string,int&gt;id;</span><br><span class="line">int cnt=0,db[maxr][maxc],m,n;</span><br><span class="line">int ID(const string&amp; s){</span><br><span class="line">    if(!id.count(s)) id[s]=++cnt;</span><br><span class="line">    return id[s];</span><br><span class="line">}</span><br><span class="line">void find(){</span><br><span class="line">    map&lt;p2,int&gt;d;</span><br><span class="line">    for(int c1=0;c1&lt;m;c1++){</span><br><span class="line">        for(int c2=c1+1;c2&lt;m;c2++){</span><br><span class="line">            for(int r=0;r&lt;n;r++){</span><br><span class="line">                p2 p=make_pair(db[r][c1], db[r][c2]);</span><br><span class="line">                if(d.count(p)) {</span><br><span class="line">                    printf(&quot;NO\n&quot;);</span><br><span class="line">                    printf(&quot;%d %d\n&quot;,d[p]+1,r+1);</span><br><span class="line">                    printf(&quot;%d %d\n&quot;,c1+1,c2+1);</span><br><span class="line">                }</span><br><span class="line">                d[p]=r;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    printf(&quot;YES\n&quot;);</span><br><span class="line">}</span><br><span class="line">int main(){</span><br><span class="line">    string s;</span><br><span class="line">    while(scanf(&quot;%d%d&quot;,&amp;n,&amp;m)!=EOF,n,m){</span><br><span class="line">        for(int i=0;i&lt;n;i++){</span><br><span class="line">            cin&gt;&gt;s;</span><br><span class="line">            int lastpos=-1;</span><br><span class="line">            for(int j=0;j&lt;m;j++){</span><br><span class="line">                int p=s.find(&apos;,&apos;,lastpos+1);</span><br><span class="line">                if(p==string::npos) p=s.length();</span><br><span class="line">                db[i][j]=ID(s.substr(lastpos+1,p-lastpos-1));</span><br><span class="line">                lastpos=p;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        find();</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stack&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1000</span>;</span><br><span class="line"><span class="keyword">int</span> target[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;n)!=EOF){</span><br><span class="line">        <span class="keyword">int</span> A=<span class="number">1</span>,B=<span class="number">1</span>,ok=<span class="number">1</span>;</span><br><span class="line">        <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt;s;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n+<span class="number">1</span>;i++){</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;target[i]);</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">while</span>(B &lt;= n){</span><br><span class="line">            <span class="keyword">if</span>(A==target[B]){</span><br><span class="line">                A++;B++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(!s.empty() &amp;&amp; s.top()==target[B]){</span><br><span class="line">                s.pop();</span><br><span class="line">                B++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(A&lt;target[B]){</span><br><span class="line">                s.push(A);</span><br><span class="line">                A++;</span><br><span class="line">            }</span><br><span class="line">            <span class="keyword">else</span>{</span><br><span class="line">                ok=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            }</span><br><span class="line">        </span><br><span class="line">        }</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>,ok?<span class="string">&quot;YES&quot;</span>:<span class="string">&quot;NO&quot;</span>);</span><br><span class="line">    }</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -199,18 +199,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/15/Rails/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Rails
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/14/C-的常量引用学习/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">C++的常量引用学习</div>
+    <a href="/2016/05/15/Database/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Database</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -245,7 +236,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Database" data-title="Database" data-url="http://yoursite.com/2016/05/15/Database/"></div>
+	<div class="ds-thread" data-thread-key="Rails" data-title="Rails" data-url="http://yoursite.com/2016/05/15/Rails/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
