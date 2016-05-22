@@ -94,7 +94,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/BFS/" style="font-size: 13.33px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/PAT甲级/" style="font-size: 13.33px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 16.67px;">STL</a> <a href="/tags/Tree/" style="font-size: 13.33px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 20px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a>
+						<a href="/tags/BFS/" style="font-size: 13.33px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/PAT/" style="font-size: 10px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 13.33px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 16.67px;">STL</a> <a href="/tags/Tree/" style="font-size: 13.33px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 20px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a>
 					</div>
 				</section>
 				
@@ -149,6 +149,82 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Shopping-in-Mars" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/22/Shopping-in-Mars/" class="article-date">
+  	<time datetime="2016-05-22T03:49:49.000Z" itemprop="datePublished">2016-05-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/22/Shopping-in-Mars/">Shopping in Mars</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#1044. Shopping in Mars (25)</p>
+<blockquote>
+<p>Shopping in Mars is quite a different experience. The Mars people pay by chained diamonds. Each diamond has a value (in Mars dollars M$). When making the payment, the chain can be cut at any position for only once and some of the diamonds are taken off the chain one by one. Once a diamond is off the chain, it cannot be taken back. For example, if we have a chain of 8 diamonds with values M$3, 2, 1, 5, 4, 6, 8, 7, and we must pay M$15.We may have 3 options:</p>
+</blockquote>
+<p>&lt;&#x2013;!more&#x2013;&gt;</p>
+<blockquote>
+<ol>
+<li>Cut the chain between 4 and 6, and take off the diamonds from the position 1 to 5 (with values 3+2+1+5+4=15).</li>
+<li>Cut before 5 or after 6, and take off the diamonds from the position 4 to 6 (with values 5+4+6=15).</li>
+<li>Cut before 8, and take off the diamonds from the position 7 to 8 (with values 8+7=15).<br>Now given the chain of diamond values and the amount that a customer has to pay, you are supposed to list all the paying options for the customer.</li>
+</ol>
+<p>If it is impossible to pay the exact amount, you must suggest solutions with minimum lost.</p>
+<p>Input Specification:</p>
+<p>Each input file contains one test case. For each case, the first line contains 2 numbers: N (&lt;=105), the total number of diamonds on the chain, and M (&lt;=108), the amount that the customer has to pay. Then the next line contains N positive numbers D1 &#x2026; DN (Di&lt;=103 for all i=1, &#x2026;, N) which are the values of the diamonds. All the numbers in a line are separated by a space.</p>
+<p>Output Specification:</p>
+<p>For each test case, print &#x201C;i-j&#x201D; in a line for each pair of i &lt;= j such that Di + &#x2026; + Dj = M. Note that if there are more than one solution, all the solutions must be printed in increasing order of i.</p>
+<p>If there is no solution, output &#x201C;i-j&#x201D; for pairs of i &lt;= j such that Di + &#x2026; + Dj &gt; M with (Di + &#x2026; + Dj - M) minimized. Again all the solutions must be printed in increasing order of i.</p>
+<p>It is guaranteed that the total value of diamonds is sufficient to pay the given amount.</p>
+<p><strong>Sample Input 1</strong>:<br>16 15<br>3 2 1 5 4 6 8 7 16 10 15 11 9 12 14 13<br><strong>Sample Output 1</strong>:<br>1-5<br>4-6<br>7-8<br>11-11<br><strong>Sample Input 2</strong>:<br>5 13<br>2 4 5 7 9<br><strong>Sample Output 2</strong>:<br>2-4<br>4-5</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">//#define LOCAL</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">1e5</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line">ll n,m,sum[maxn],ans;</span><br><span class="line"><span class="keyword">int</span> a[maxn];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LOCAL</span></span><br><span class="line">    freopen(<span class="string">&quot;/Users/jy/input.txt&quot;</span>,<span class="string">&quot;r&quot;</span>,<span class="built_in">stdin</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>,&amp;n,&amp;m);</span><br><span class="line">    sum[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;a[i]),sum[i]=sum[i<span class="number">-1</span>]+a[i];</span><br><span class="line">    ans=sum[n];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">        <span class="keyword">while</span>(sum[j]-sum[i]&lt;m &amp;&amp; j&lt;=n) j++;</span><br><span class="line">        <span class="keyword">if</span>(sum[j]-sum[i]&gt;=m) ans=min(ans,sum[j]-sum[i]);</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>,j=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">        <span class="keyword">while</span>(sum[j]-sum[i]&lt;ans &amp;&amp; j&lt;=n) j++;</span><br><span class="line">        <span class="keyword">if</span>(sum[j]-sum[i]==ans) <span class="built_in">printf</span>(<span class="string">&quot;%d-%d\n&quot;</span>,i+<span class="number">1</span>,j);</span><br><span class="line">    }</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAT/">PAT</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-Abbott-s-Revenge" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -689,72 +765,6 @@
       
         <p class="article-more-link">
           <a  href="/2016/05/17/Dropping-Balls/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Boxes-in-a-line" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/05/17/Boxes-in-a-line/" class="article-date">
-  	<time datetime="2016-05-17T06:20:11.000Z" itemprop="datePublished">2016-05-17</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/17/Boxes-in-a-line/">Boxes in a line</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>你有一行盒子，从左到右依次编号为1, 2, 3,…, n。你可以执行四种指令：</p>
-<ul>
-<li>1 X Y表示把盒子X移动到盒子Y左边（如果X已经在Y的左边则忽略此指令）。</li>
-<li>2 X Y表示把盒子X移动到盒子Y右边（如果X已经在Y的右边则忽略此指令）。</li>
-<li>3 X Y表示交换盒子X和Y的位置。</li>
-<li>4 表示反转整条链。<br>盒子个数n和指令条数m（1&lt;=n,m&lt;=100,000)
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UVa/">UVa</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/05/17/Boxes-in-a-line/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>
