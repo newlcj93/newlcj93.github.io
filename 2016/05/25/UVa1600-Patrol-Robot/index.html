@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>UVa1600-Patrol Robot | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="题目：
+
+机器人要从一个m*n（1≤m，n≤20）网格的左上角(1,1)走到右下角(m,n)。网格中的一些格子是空地（用0表示），其他格子是障碍（用1表示）。机器人每次可以往4个方向走一格，但最多连续地穿越k（0≤k≤20）个障碍，求最短路长度。起点和终点保证是空地。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UVa1600-Patrol Robot">
+<meta property="og:url" content="http://yoursite.com/2016/05/25/UVa1600-Patrol-Robot/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="题目：
+
+机器人要从一个m*n（1≤m，n≤20）网格的左上角(1,1)走到右下角(m,n)。网格中的一些格子是空地（用0表示），其他格子是障碍（用1表示）。机器人每次可以往4个方向走一格，但最多连续地穿越k（0≤k≤20）个障碍，求最短路长度。起点和终点保证是空地。">
+<meta property="og:updated_time" content="2016-05-25T02:03:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UVa1600-Patrol Robot">
+<meta name="twitter:description" content="题目：
+
+机器人要从一个m*n（1≤m，n≤20）网格的左上角(1,1)走到右下角(m,n)。网格中的一些格子是空地（用0表示），其他格子是障碍（用1表示）。机器人每次可以往4个方向走一格，但最多连续地穿越k（0≤k≤20）个障碍，求最短路长度。起点和终点保证是空地。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BFS/" style="font-size: 17.5px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/PAT/" style="font-size: 15px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 12.5px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 17.5px;">STL</a> <a href="/tags/Tree/" style="font-size: 12.5px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 20px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-UVa1600-Patrol-Robot" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/25/UVa1600-Patrol-Robot/" class="article-date">
+  	<time datetime="2016-05-25T02:01:56.000Z" itemprop="datePublished">2016-05-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      UVa1600-Patrol Robot
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BFS/">BFS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UVa/">UVa</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>&#x9898;&#x76EE;</strong>&#xFF1A;</p>
+<blockquote>
+<p>&#x673A;&#x5668;&#x4EBA;&#x8981;&#x4ECE;&#x4E00;&#x4E2A;m*n&#xFF08;1&#x2264;m&#xFF0C;n&#x2264;20&#xFF09;&#x7F51;&#x683C;&#x7684;&#x5DE6;&#x4E0A;&#x89D2;(1,1)&#x8D70;&#x5230;&#x53F3;&#x4E0B;&#x89D2;(m,n)&#x3002;&#x7F51;&#x683C;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x683C;&#x5B50;&#x662F;&#x7A7A;&#x5730;&#xFF08;&#x7528;0&#x8868;&#x793A;&#xFF09;&#xFF0C;&#x5176;&#x4ED6;&#x683C;&#x5B50;&#x662F;&#x969C;&#x788D;&#xFF08;&#x7528;1&#x8868;&#x793A;&#xFF09;&#x3002;&#x673A;&#x5668;&#x4EBA;&#x6BCF;&#x6B21;&#x53EF;&#x4EE5;&#x5F80;4&#x4E2A;&#x65B9;&#x5411;&#x8D70;&#x4E00;&#x683C;&#xFF0C;&#x4F46;&#x6700;&#x591A;&#x8FDE;&#x7EED;&#x5730;&#x7A7F;&#x8D8A;k&#xFF08;0&#x2264;k&#x2264;20&#xFF09;&#x4E2A;&#x969C;&#x788D;&#xFF0C;&#x6C42;&#x6700;&#x77ED;&#x8DEF;&#x957F;&#x5EA6;&#x3002;&#x8D77;&#x70B9;&#x548C;&#x7EC8;&#x70B9;&#x4FDD;&#x8BC1;&#x662F;&#x7A7A;&#x5730;&#x3002;<br><a id="more"></a></p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LOCAL</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,K;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">20</span>+<span class="number">5</span>;</span><br><span class="line"><span class="keyword">int</span> G[maxn][maxn],d[maxn][maxn][maxn],vis[maxn][maxn][maxn];</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> dr[]={<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>};</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> dc[]={<span class="number">0</span>,<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>};</span><br><span class="line"><span class="keyword">struct</span> Node{</span><br><span class="line">    <span class="keyword">int</span> r,c,k;</span><br><span class="line">    Node(<span class="keyword">int</span> r=<span class="number">0</span>,<span class="keyword">int</span> c=<span class="number">0</span>,<span class="keyword">int</span> k=<span class="number">0</span>):r(r),c(c),k(k){}</span><br><span class="line">};</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">legal</span><span class="params">(<span class="keyword">int</span> r,<span class="keyword">int</span> c,<span class="keyword">int</span> k)</span></span>{</span><br><span class="line">    return r&gt;<span class="number">0</span> &amp;&amp; r&lt;=m &amp;&amp; c&gt;<span class="number">0</span> &amp;&amp; c&lt;=n &amp;&amp; k&gt;=<span class="number">0</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function">Node <span class="title">walk</span><span class="params">(<span class="keyword">const</span> Node&amp; u,<span class="keyword">int</span> i)</span></span>{</span><br><span class="line">    <span class="keyword">int</span> r=u.r+dr[i];</span><br><span class="line">    <span class="keyword">int</span> c=u.c+dc[i];</span><br><span class="line">    <span class="keyword">int</span> k=G[r][c]?u.k<span class="number">-1</span>:u.k;</span><br><span class="line">    return Node(r,c,k);</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">()</span></span>{</span><br><span class="line">    <span class="built_in">queue</span>&lt;Node&gt;q;</span><br><span class="line">    <span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</span><br><span class="line">    <span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));</span><br><span class="line">    <span class="function">Node <span class="title">u</span><span class="params">(<span class="number">1</span>,<span class="number">1</span>,K)</span></span>;</span><br><span class="line">    q.push(u);</span><br><span class="line">    vis[<span class="number">1</span>][<span class="number">1</span>][K]=<span class="number">1</span>;</span><br><span class="line">    d[<span class="number">1</span>][<span class="number">1</span>][K]=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(!q.empty()){</span><br><span class="line">        Node u=q.front();q.pop();</span><br><span class="line">        <span class="keyword">if</span>(u.r==m &amp;&amp; u.c==n &amp;&amp; u.k&gt;=<span class="number">0</span>) {<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>,d[u.r][u.c][u.k]);return;}</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++){</span><br><span class="line">            Node v=walk(u,i);</span><br><span class="line">            <span class="keyword">if</span>(legal(v.r, v.c, v.k) &amp;&amp; !vis[v.r][v.c][v.k]){</span><br><span class="line">                d[v.r][v.c][v.k]=d[u.r][u.c][u.k]+<span class="number">1</span>;</span><br><span class="line">                vis[v.r][v.c][v.k]=<span class="number">1</span>;</span><br><span class="line">                q.push(v);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;-1\n&quot;</span>);</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> LOCAL</span></span><br><span class="line">    freopen(<span class="string">&quot;/Users/jy/input.txt&quot;</span>,<span class="string">&quot;r&quot;</span>,<span class="built_in">stdin</span>);</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--){</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d%d%d&quot;</span>,&amp;m,&amp;n,&amp;K);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=m;i++){</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;=n;j++){</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;G[i][j]);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        bfs();</span><br><span class="line">    }</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/24/Paintball/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Paintball</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="UVa1600-Patrol-Robot" data-title="UVa1600-Patrol Robot" data-url="http://yoursite.com/2016/05/25/UVa1600-Patrol-Robot/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
