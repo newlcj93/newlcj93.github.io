@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>1095. Cars on Campus (30) | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Zhejiang University has 6 campuses and a lot of gates. From each gate we can collect the in/out times and the plate numbers of the cars crossing the gate. Now with all the information available, you">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1095. Cars on Campus (30)">
+<meta property="og:url" content="http://yoursite.com/2016/09/09/1095-Cars-on-Campus-30/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="Zhejiang University has 6 campuses and a lot of gates. From each gate we can collect the in/out times and the plate numbers of the cars crossing the gate. Now with all the information available, you">
+<meta property="og:updated_time" content="2016-09-09T14:55:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1095. Cars on Campus (30)">
+<meta name="twitter:description" content="Zhejiang University has 6 campuses and a lot of gates. From each gate we can collect the in/out times and the plate numbers of the cars crossing the gate. Now with all the information available, you">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BFS/" style="font-size: 15px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/PAT/" style="font-size: 20px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 12.5px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 15px;">STL</a> <a href="/tags/Tree/" style="font-size: 12.5px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 17.5px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-1095-Cars-on-Campus-30" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/09/1095-Cars-on-Campus-30/" class="article-date">
+  	<time datetime="2016-09-09T14:54:11.000Z" itemprop="datePublished">2016-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1095. Cars on Campus (30)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAT/">PAT</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Zhejiang University has 6 campuses and a lot of gates. From each gate we can collect the in/out times and the plate numbers of the cars crossing the gate. Now with all the information available, you are supposed to tell, at any specific time point, the number of cars parking on campus, and at the end of the day find the cars that have parked for the longest time period.<br><a id="more"></a><br>Input Specification:</p>
+<p>Each input file contains one test case. Each case starts with two positive integers N (&lt;= 10000), the number of records, and K (&lt;= 80000) the number of queries. Then N lines follow, each gives a record in the format</p>
+<p>plate_number hh:mm:ss status</p>
+<p>where plate_number is a string of 7 English capital letters or 1-digit numbers; hh:mm:ss represents the time point in a day by hour:minute:second, with the earliest time being 00:00:00 and the latest 23:59:59; and status is either in or out.</p>
+<p>Note that all times will be within a single day. Each &#x201C;in&#x201D; record is paired with the chronologically next record for the same car provided it is an &#x201C;out&#x201D; record. Any &#x201C;in&#x201D; records that are not paired with an &#x201C;out&#x201D; record are ignored, as are &#x201C;out&#x201D; records not paired with an &#x201C;in&#x201D; record. It is guaranteed that at least one car is well paired in the input, and no car is both &#x201C;in&#x201D; and &#x201C;out&#x201D; at the same moment. Times are recorded using a 24-hour clock.</p>
+<p>Then K lines of queries follow, each gives a time point in the format hh:mm:ss. Note: the queries are given in ascending order of the times.</p>
+<p>Output Specification:</p>
+<p>For each query, output in a line the total number of cars parking on campus. The last line of output is supposed to give the plate number of the car that has parked for the longest time period, and the corresponding time length. If such a car is not unique, then output all of their plate numbers in a line in alphabetical order, separated by a space.</p>
+<p>Sample Input:<br>16 7<br>JH007BD 18:00:01 in<br>ZD00001 11:30:08 out<br>DB8888A 13:00:00 out<br>ZA3Q625 23:59:50 out<br>ZA133CH 10:23:00 in<br>ZD00001 04:09:59 in<br>JH007BD 05:09:59 in<br>ZA3Q625 11:42:01 out<br>JH007BD 05:10:33 in<br>ZA3Q625 06:30:50 in<br>JH007BD 12:23:42 out<br>ZA3Q625 23:55:00 in<br>JH007BD 12:24:23 out<br>ZA133CH 17:11:22 out<br>JH007BD 18:07:01 out<br>DB8888A 06:30:50 in<br>05:10:00<br>06:30:50<br>11:00:00<br>12:23:42<br>14:00:00<br>18:00:00<br>23:59:00<br>Sample Output:<br>1<br>4<br>5<br>2<br>1<br>0<br>1<br>JH007BD ZD00001 07:20:09</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn=24*3600+10;</span><br><span class="line">int cnt[maxn];</span><br><span class="line">string sta;</span><br><span class="line">string pl[maxn];</span><br><span class="line">vector&lt;string&gt;s;</span><br><span class="line">int c[maxn],v[maxn],t[maxn];</span><br><span class="line">bool cmp(int x,int y){</span><br><span class="line">    return pl[x]==pl[y]?t[x]&lt;t[y]:pl[x]&lt;pl[y];</span><br><span class="line">}</span><br><span class="line">map&lt;string,int&gt;M;</span><br><span class="line">map&lt;string,int&gt;::iterator it;</span><br><span class="line">int main(){</span><br><span class="line">    //freopen(&quot;/Users/jy/input.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    int n,m,hr,mi,se,x,max_t=0,time;</span><br><span class="line">    memset(cnt, 0, sizeof(cnt));</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">    for(int i=0;i&lt;n;i++){</span><br><span class="line">        cin&gt;&gt;pl[i];</span><br><span class="line">        c[i]=i;</span><br><span class="line">        scanf(&quot;%d:%d:%d&quot;,&amp;hr,&amp;mi,&amp;se);</span><br><span class="line">        x=3600*hr+mi*60+se;</span><br><span class="line">        t[i]=x;</span><br><span class="line">        cin&gt;&gt;sta;</span><br><span class="line">        if(sta[0]==&apos;i&apos;) {v[i]=1;}</span><br><span class="line">        else {v[i]=0;}</span><br><span class="line">    }</span><br><span class="line">    sort(c,c+n,cmp);</span><br><span class="line">    for(int i=0;i&lt;n;i++){</span><br><span class="line">        if(pl[c[i]]==pl[c[i+1]] &amp;&amp; v[c[i]]==1&amp;&amp;!v[c[i+1]]){</span><br><span class="line">            time=t[c[i+1]]-t[c[i]];</span><br><span class="line">            cnt[t[c[i]]]++;</span><br><span class="line">            cnt[t[c[i+1]]]--;</span><br><span class="line">             M[pl[c[i]]] += time;</span><br><span class="line">            max_t=max(M[pl[c[i]]],max_t);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    for(int i=1;i&lt;maxn;i++)cnt[i]+=cnt[i-1];</span><br><span class="line">    for(int i=0;i&lt;m;i++){</span><br><span class="line">        scanf(&quot;%d:%d:%d&quot;,&amp;hr,&amp;mi,&amp;se);</span><br><span class="line">        x=3600*hr+mi*60+se;</span><br><span class="line">        printf(&quot;%d\n&quot;,cnt[x]);</span><br><span class="line">    }</span><br><span class="line">    for(it=M.begin();it!=M.end();it++){</span><br><span class="line">        if(it-&gt;second==max_t) s.push_back(it-&gt;first);</span><br><span class="line">    }</span><br><span class="line">    sort(s.begin(),s.end());</span><br><span class="line">    for(int i=0;i&lt;s.size();i++){</span><br><span class="line">        cout&lt;&lt;s[i]&lt;&lt;&quot; &quot;;</span><br><span class="line">    }</span><br><span class="line">    hr=max_t/3600;mi=max_t%3600/60;se=max_t%60;</span><br><span class="line">    printf(&quot;%02d:%02d:%02d\n&quot;,hr,mi,se);</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/09/1053-Path-of-Equal-Weight-30/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          1053. Path of Equal Weight (30)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/09/1003-Emergency-25/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1003. Emergency (25)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1095-Cars-on-Campus-30" data-title="1095. Cars on Campus (30)" data-url="http://yoursite.com/2016/09/09/1095-Cars-on-Campus-30/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>1028. List Sorting (25) | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Excel can sort records according to any column. Now you are supposed to imitate this function.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1028. List Sorting (25)">
+<meta property="og:url" content="http://yoursite.com/2016/09/09/1028-List-Sorting-25/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="Excel can sort records according to any column. Now you are supposed to imitate this function.">
+<meta property="og:updated_time" content="2016-09-09T09:14:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1028. List Sorting (25)">
+<meta name="twitter:description" content="Excel can sort records according to any column. Now you are supposed to imitate this function.">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BFS/" style="font-size: 15px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/PAT/" style="font-size: 20px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 12.5px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 15px;">STL</a> <a href="/tags/Tree/" style="font-size: 12.5px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 17.5px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-1028-List-Sorting-25" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/09/1028-List-Sorting-25/" class="article-date">
+  	<time datetime="2016-09-09T09:13:29.000Z" itemprop="datePublished">2016-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1028. List Sorting (25)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAT/">PAT</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Excel can sort records according to any column. Now you are supposed to imitate this function.<br><a id="more"></a><br>Input</p>
+<p>Each input file contains one test case. For each case, the first line contains two integers N (&lt;=100000) and C, where N is the number of records and C is the column that you are supposed to sort the records with. Then N lines follow, each contains a record of a student. A student&#x2019;s record consists of his or her distinct ID (a 6-digit number), name (a string with no more than 8 characters without space), and grade (an integer between 0 and 100, inclusive).</p>
+<p>Output</p>
+<p>For each test case, output the sorting result in N lines. That is, if C = 1 then the records must be sorted in increasing order according to ID&#x2019;s; if C = 2 then the records must be sorted in non-decreasing order according to names; and if C = 3 then the records must be sorted in non-decreasing order according to grades. If there are several students who have the same name or grade, they must be sorted according to their ID&#x2019;s in increasing order.</p>
+<p>Sample Input 1<br>3 1<br>000007 James 85<br>000010 Amy 90<br>000001 Zoe 60<br>Sample Output 1<br>000001 Zoe 60<br>000007 James 85<br>000010 Amy 90<br>Sample Input 2<br>4 2<br>000007 James 85<br>000010 Amy 90<br>000001 Zoe 60<br>000002 James 98<br>Sample Output 2<br>000010 Amy 90<br>000002 James 98<br>000007 James 85<br>000001 Zoe 60<br>Sample Input 3<br>4 3<br>000007 James 85<br>000010 Amy 90<br>000001 Zoe 60<br>000002 James 90<br>Sample Output 3<br>000001 Zoe 60<br>000007 James 85<br>000002 James 90<br>000010 Amy 90</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;vector&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">#include &lt;queue&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;sstream&gt;</span><br><span class="line">#include &lt;cmath&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int maxn=1e5+10,INF=0x7FFFFFFF;</span><br><span class="line">int id[maxn],g[maxn],c[maxn];</span><br><span class="line">string name[maxn];</span><br><span class="line">bool cmp1(int x,int y){</span><br><span class="line">    return id[x]&lt;id[y];</span><br><span class="line">}</span><br><span class="line">bool cmp2(int x,int y){</span><br><span class="line">    return name[x]==name[y]?id[x]&lt;id[y]:name[x]&lt;name[y];</span><br><span class="line">}</span><br><span class="line">bool cmp3(int x,int y){</span><br><span class="line">    return g[x]==g[y]?id[x]&lt;id[y]:g[x]&lt;g[y];</span><br><span class="line">}</span><br><span class="line">int main(){</span><br><span class="line">    //freopen(&quot;/Users/jy/input.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    int n,ind,x;</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;ind);</span><br><span class="line">    for(int i=0;i&lt;n;i++){</span><br><span class="line">        cin&gt;&gt;id[i]&gt;&gt;name[i]&gt;&gt;g[i];</span><br><span class="line">        c[i]=i;</span><br><span class="line">    }</span><br><span class="line">    if(ind==1)sort(c,c+n,cmp1);</span><br><span class="line">    else if(ind==2)sort(c, c+n, cmp2);</span><br><span class="line">    else sort(c, c+n, cmp3);</span><br><span class="line">    for(int i=0;i&lt;n;i++){</span><br><span class="line">        x=c[i];</span><br><span class="line">        printf(&quot;%06d &quot;,id[x]);</span><br><span class="line">        cout&lt;&lt;name[x]&lt;&lt;&quot; &quot;;</span><br><span class="line">        printf(&quot;%d\n&quot;,g[x]);</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/09/1020-Tree-Traversals-25/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          1020. Tree Traversals (25)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/09/1029-Median-25/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1029. Median (25)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1028-List-Sorting-25" data-title="1028. List Sorting (25)" data-url="http://yoursite.com/2016/09/09/1028-List-Sorting-25/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>

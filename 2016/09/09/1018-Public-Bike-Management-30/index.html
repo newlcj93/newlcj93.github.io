@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>1018. Public Bike Management (30) | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="There is a public bike service in Hangzhou City which provides great convenience to the tourists from all over the world. One may rent a bike at any station and return it to any other stations in the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1018. Public Bike Management (30)">
+<meta property="og:url" content="http://yoursite.com/2016/09/09/1018-Public-Bike-Management-30/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="There is a public bike service in Hangzhou City which provides great convenience to the tourists from all over the world. One may rent a bike at any station and return it to any other stations in the">
+<meta property="og:updated_time" content="2016-09-09T15:16:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1018. Public Bike Management (30)">
+<meta name="twitter:description" content="There is a public bike service in Hangzhou City which provides great convenience to the tourists from all over the world. One may rent a bike at any station and return it to any other stations in the">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BFS/" style="font-size: 15px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/PAT/" style="font-size: 20px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 12.5px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 15px;">STL</a> <a href="/tags/Tree/" style="font-size: 12.5px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 17.5px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-1018-Public-Bike-Management-30" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/09/1018-Public-Bike-Management-30/" class="article-date">
+  	<time datetime="2016-09-09T15:15:41.000Z" itemprop="datePublished">2016-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1018. Public Bike Management (30)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PAT/">PAT</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>There is a public bike service in Hangzhou City which provides great convenience to the tourists from all over the world. One may rent a bike at any station and return it to any other stations in the city.<br><a id="more"></a><br>The Public Bike Management Center (PBMC) keeps monitoring the real-time capacity of all the stations. A station is said to be in perfect condition if it is exactly half-full. If a station is full or empty, PBMC will collect or send bikes to adjust the condition of that station to perfect. And more, all the stations on the way will be adjusted as well.</p>
+<p>When a problem station is reported, PBMC will always choose the shortest path to reach that station. If there are more than one shortest path, the one that requires the least number of bikes sent from PBMC will be chosen.</p>
+<p>Figure 1<br>Figure 1 illustrates an example. The stations are represented by vertices and the roads correspond to the edges. The number on an edge is the time taken to reach one end station from another. The number written inside a vertex S is the current number of bikes stored at S. Given that the maximum capacity of each station is 10. To solve the problem at S3, we have 2 different shortest paths:</p>
+<ol>
+<li><p>PBMC -&gt; S1 -&gt; S3. In this case, 4 bikes must be sent from PBMC, because we can collect 1 bike from S1 and then take 5 bikes to S3, so that both stations will be in perfect conditions.</p>
+</li>
+<li><p>PBMC -&gt; S2 -&gt; S3. This path requires the same time as path 1, but only 3 bikes sent from PBMC and hence is the one that will be chosen.</p>
+</li>
+</ol>
+<p>Input Specification:</p>
+<p>Each input file contains one test case. For each case, the first line contains 4 numbers: Cmax (&lt;= 100), always an even number, is the maximum capacity of each station; N (&lt;= 500), the total number of stations; Sp, the index of the problem station (the stations are numbered from 1 to N, and PBMC is represented by the vertex 0); and M, the number of roads. The second line contains N non-negative numbers Ci (i=1,&#x2026;N) where each Ci is the current number of bikes at Si respectively. Then M lines follow, each contains 3 numbers: Si, Sj, and Tij which describe the time Tij taken to move betwen stations Si and Sj. All the numbers in a line are separated by a space.</p>
+<p>Output Specification:</p>
+<p>For each test case, print your results in one line. First output the number of bikes that PBMC must send. Then after one space, output the path in the format: 0-&gt;S1-&gt;&#x2026;-&gt;Sp. Finally after another space, output the number of bikes that we must take back to PBMC after the condition of Sp is adjusted to perfect.</p>
+<p>Note that if such a path is not unique, output the one that requires minimum number of bikes that we must take back to PBMC. The judge&#x2019;s data guarantee that such a path is unique.</p>
+<p>Sample Input:<br>10 3 3 5<br>6 7 0<br>0 1 1<br>0 2 1<br>0 3 3<br>1 3 1<br>2 3 1<br>Sample Output:<br>3 0-&gt;2-&gt;3 0</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;cstdio&gt;  </span><br><span class="line">#include&lt;string&gt;  </span><br><span class="line">#include&lt;cstring&gt;  </span><br><span class="line">#include&lt;vector&gt;  </span><br><span class="line">#include&lt;iostream&gt;  </span><br><span class="line">#include&lt;queue&gt;  </span><br><span class="line">#include&lt;algorithm&gt;  </span><br><span class="line">using namespace std;  </span><br><span class="line">typedef long long LL;  </span><br><span class="line">const int INF = 0x7FFFFFFF;  </span><br><span class="line">const int maxn = 1e3 + 10;  </span><br><span class="line">int c, n, s, m, f[maxn], map[maxn][maxn], x, y, z, dis[maxn], vis[maxn], ans;  </span><br><span class="line">  </span><br><span class="line">void dfs(int x, int y)  </span><br><span class="line">{  </span><br><span class="line">    if (y &lt; 0) return;  </span><br><span class="line">    if (x == s) { ans = min(ans, y); return; }  </span><br><span class="line">    for (int i = 0; i &lt;= n; i++)  </span><br><span class="line">    {  </span><br><span class="line">        if (map[x][i] == -1) continue;  </span><br><span class="line">        if (dis[i] == dis[x] + map[x][i]) dfs(i, y - (c / 2 - f[i]));  </span><br><span class="line">    }  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">bool Dfs(int x, int y, int z)  </span><br><span class="line">{  </span><br><span class="line">    if (!x) { if (y == z) { printf(&quot;0&quot;); return true; } else return false; }  </span><br><span class="line">    for (int i = 0; i &lt;= n; i++)  </span><br><span class="line">    {  </span><br><span class="line">        if (map[x][i] == -1) continue;  </span><br><span class="line">        if (dis[x] == dis[i] + map[x][i])  </span><br><span class="line">        {  </span><br><span class="line">            if (Dfs(i, y + c / 2 - f[x], z))  </span><br><span class="line">            {  </span><br><span class="line">                printf(&quot;-&gt;%d&quot;, x);  </span><br><span class="line">                return true;  </span><br><span class="line">            }  </span><br><span class="line">        }  </span><br><span class="line">    }  </span><br><span class="line">    return false;  </span><br><span class="line">}  </span><br><span class="line">  </span><br><span class="line">int main()  </span><br><span class="line">{  </span><br><span class="line">    scanf(&quot;%d%d%d%d&quot;, &amp;c, &amp;n, &amp;s, &amp;m);  </span><br><span class="line">    for (int i = 1; i &lt;= n; i++) scanf(&quot;%d&quot;, &amp;f[i]);  </span><br><span class="line">    memset(map, -1, sizeof(map));  </span><br><span class="line">    memset(dis, -1, sizeof(dis));  </span><br><span class="line">    while (m--)  </span><br><span class="line">    {   </span><br><span class="line">        scanf(&quot;%d%d%d&quot;, &amp;x, &amp;y, &amp;z);  </span><br><span class="line">        if (map[x][y] == -1 || map[x][y] &gt; z) map[x][y] = map[y][x] = z;  </span><br><span class="line">    }  </span><br><span class="line">    dis[0] = 0;  </span><br><span class="line">    while (true)  </span><br><span class="line">    {  </span><br><span class="line">        int now = -1;  </span><br><span class="line">        for (int i = 0; i &lt;= n; i++)  </span><br><span class="line">        {  </span><br><span class="line">            if (!vis[i] &amp;&amp; dis[i] != -1 &amp;&amp; (now == -1 || dis[i] &lt; dis[now])) now = i;  </span><br><span class="line">        }  </span><br><span class="line">        if (now == -1) break;  </span><br><span class="line">        vis[now] = 1;  </span><br><span class="line">        for (int i = 0; i &lt;= n; i++)  </span><br><span class="line">        {  </span><br><span class="line">            if (map[now][i] == -1) continue;  </span><br><span class="line">            if (dis[i] == -1 || dis[i]&gt;dis[now] + map[now][i]) dis[i] = dis[now] + map[now][i];  </span><br><span class="line">        }  </span><br><span class="line">    }  </span><br><span class="line">    int q = 0, h = n*c / 2;  </span><br><span class="line">    while (q &lt;= h)  </span><br><span class="line">    {  </span><br><span class="line">        int mid = q + h &gt;&gt; 1;  </span><br><span class="line">        ans = INF;  dfs(0, mid);  </span><br><span class="line">        if (ans != INF) h = mid - 1; else q = mid + 1;  </span><br><span class="line">    }  </span><br><span class="line">    printf(&quot;%d &quot;, q);  </span><br><span class="line">    dfs(0, q);  </span><br><span class="line">    Dfs(s, ans, q);  </span><br><span class="line">    printf(&quot; %d\n&quot;, ans);  </span><br><span class="line">    return 0;  </span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/09/1111-Online-Map-30/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          1111. Online Map (30)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/09/1022-Digital-Library-30/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1022. Digital Library (30)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1018-Public-Bike-Management-30" data-title="1018. Public Bike Management (30)" data-url="http://yoursite.com/2016/09/09/1018-Public-Bike-Management-30/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>

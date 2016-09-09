@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>1111. Online Map (30) | luchujie&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Input our current position and a destination, an online map can recommend several paths. Now your job is to recommend two paths to your user: one is the shortest, and the other is the fastest. It is">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1111. Online Map (30)">
+<meta property="og:url" content="http://yoursite.com/2016/09/09/1111-Online-Map-30/index.html">
+<meta property="og:site_name" content="luchujie's Blog">
+<meta property="og:description" content="Input our current position and a destination, an online map can recommend several paths. Now your job is to recommend two paths to your user: one is the shortest, and the other is the fastest. It is">
+<meta property="og:updated_time" content="2016-09-09T15:18:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1111. Online Map (30)">
+<meta name="twitter:description" content="Input our current position and a destination, an online map can recommend several paths. Now your job is to recommend two paths to your user: one is the shortest, and the other is the fastest. It is">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">luchujie</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/BFS/" style="font-size: 15px;">BFS</a> <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/PAT/" style="font-size: 20px;">PAT</a> <a href="/tags/PAT甲级/" style="font-size: 12.5px;">PAT甲级</a> <a href="/tags/Queue/" style="font-size: 10px;">Queue</a> <a href="/tags/STL/" style="font-size: 15px;">STL</a> <a href="/tags/Tree/" style="font-size: 12.5px;">Tree</a> <a href="/tags/Trees/" style="font-size: 10px;">Trees</a> <a href="/tags/UVa/" style="font-size: 17.5px;">UVa</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/priority-queue/" style="font-size: 10px;">priority queue</a> <a href="/tags/stack/" style="font-size: 10px;">stack</a> <a href="/tags/内存池/" style="font-size: 10px;">内存池</a> <a href="/tags/动态规划/" style="font-size: 10px;">动态规划</a> <a href="/tags/回文串/" style="font-size: 10px;">回文串</a> <a href="/tags/图/" style="font-size: 10px;">图</a> <a href="/tags/心情/" style="font-size: 10px;">心情</a> <a href="/tags/贪心算法/" style="font-size: 10px;">贪心算法</a>
+					</div>
+				</section>
+				
+				
+				
+
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">luchujie</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="/avatar.png" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">luchujie</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/newlcj93" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/1731585780/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-1111-Online-Map-30" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/09/1111-Online-Map-30/" class="article-date">
+  	<time datetime="2016-09-09T15:17:02.000Z" itemprop="datePublished">2016-09-09</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      1111. Online Map (30)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Input our current position and a destination, an online map can recommend several paths. Now your job is to recommend two paths to your user: one is the shortest, and the other is the fastest. It is guaranteed that a path exists for any request.<br><a id="more"></a><br>Input Specification:</p>
+<p>Each input file contains one test case. For each case, the first line gives two positive integers N (2 &lt;= N &lt;= 500), and M, being the total number of streets intersections on a map, and the number of streets, respectively. Then M lines follow, each describes a street in the format:</p>
+<p>V1 V2 one-way length time</p>
+<p>where V1 and V2 are the indices (from 0 to N-1) of the two ends of the street; one-way is 1 if the street is one-way from V1 to V2, or 0 if not; length is the length of the street; and time is the time taken to pass the street.</p>
+<p>Finally a pair of source and destination is given.</p>
+<p>Output Specification:</p>
+<p>For each case, first print the shortest path from the source to the destination with distance D in the format:</p>
+<p>Distance = D: source -&gt; v1 -&gt; &#x2026; -&gt; destination</p>
+<p>Then in the next line print the fastest path with total time T:</p>
+<p>Time = T: source -&gt; w1 -&gt; &#x2026; -&gt; destination</p>
+<p>In case the shortest path is not unique, output the fastest one among the shortest paths, which is guaranteed to be unique. In case the fastest path is not unique, output the one that passes through the fewest intersections, which is guaranteed to be unique.</p>
+<p>In case the shortest and the fastest paths are identical, print them in one line in the format:</p>
+<p>Distance = D; Time = T: source -&gt; u1 -&gt; &#x2026; -&gt; destination</p>
+<p>Sample Input 1:<br>10 15<br>0 1 0 1 1<br>8 0 0 1 1<br>4 8 1 1 1<br>3 4 0 3 2<br>3 9 1 4 1<br>0 6 0 1 1<br>7 5 1 2 1<br>8 5 1 2 1<br>2 3 0 2 2<br>2 1 1 1 1<br>1 3 0 3 1<br>1 4 0 1 1<br>9 7 1 3 1<br>5 1 0 5 2<br>6 5 1 1 2<br>3 5<br>Sample Output 1:<br>Distance = 6: 3 -&gt; 4 -&gt; 8 -&gt; 5<br>Time = 3: 3 -&gt; 1 -&gt; 5<br>Sample Input 2:<br>7 9<br>0 4 1 1 1<br>1 6 1 1 3<br>2 6 1 1 1<br>2 5 1 2 2<br>3 0 0 1 1<br>3 1 1 1 3<br>3 2 1 1 2<br>4 5 0 2 2<br>6 5 1 1 2<br>3 5<br>Sample Output 2:<br>Distance = 3; Time = 4: 3 -&gt; 2 -&gt; 5</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;cstdio&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">#include &lt;stack&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int MAXN = 1&lt;&lt;30;</span><br><span class="line">const int MAX = 510;</span><br><span class="line">int dis[MAX],cost[MAX],vis[MAX],t[MAX][MAX],d[MAX][MAX],n_len[MAX],n_time[MAX],cnt[MAX];</span><br><span class="line">int n,m,st,ed;</span><br><span class="line">stack&lt;int&gt;s1,s2;</span><br><span class="line">void Dikja_len(int s){</span><br><span class="line">    memset(dis,-1,sizeof(dis));</span><br><span class="line">    memset(vis,0,sizeof(vis));</span><br><span class="line">    dis[s]=0;</span><br><span class="line">    int now=s;</span><br><span class="line">    while(now!=ed){</span><br><span class="line">        vis[now]=1;</span><br><span class="line">        for(int i=0;i&lt;n;i++){</span><br><span class="line">            if(d[now][i]){</span><br><span class="line">                if(dis[i]==-1||dis[now] + d[now][i] &lt;dis[i]){</span><br><span class="line">                    dis[i] = dis[now] + d[now][i];</span><br><span class="line">                    n_len[i] = now;</span><br><span class="line">                    cost[i] = cost[now] + t[now][i];</span><br><span class="line">                }</span><br><span class="line">                else if (dis[i] == dis[now] + d[now][i] &amp;&amp; cost[i] &gt; cost[now] + t[now][i]){</span><br><span class="line">                    n_len[i] = now;</span><br><span class="line">                    cost[i] = cost[now] + t[now][i];</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        int min=MAXN;</span><br><span class="line">        for(int i=0;i&lt;n;i++){</span><br><span class="line">            if(!vis[i] &amp;&amp; dis[i]!=-1){</span><br><span class="line">                if(dis[i] &lt;min){</span><br><span class="line">                    now=i;</span><br><span class="line">                    min=dis[i];</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">void Dikja_time(int s){</span><br><span class="line">    memset(cost,-1,sizeof(cost));</span><br><span class="line">    memset(vis,0,sizeof(vis));</span><br><span class="line">    cost[s]=0;</span><br><span class="line">    cnt[s]=1;</span><br><span class="line">    int now=s;</span><br><span class="line">    while(now!=ed){</span><br><span class="line">        vis[now]=1;</span><br><span class="line">        for(int i=0;i&lt;n;i++){</span><br><span class="line">            if(t[now][i]){</span><br><span class="line">                if(cost[i]==-1||cost[now] + t[now][i] &lt;cost[i]){</span><br><span class="line">                    cost[i] = cost[now] + t[now][i];</span><br><span class="line">                    n_time[i] = now;</span><br><span class="line">                    cnt[i] = cnt[now]+1;</span><br><span class="line">                }</span><br><span class="line">                else if (cost[i] == cost[now] + t[now][i] &amp;&amp; cnt[i]&gt;cnt[now]+1){</span><br><span class="line">                    n_time[i] = now;</span><br><span class="line">                    cnt[i] = cnt[now]+1;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">        int min=MAXN;</span><br><span class="line">        for(int i=0;i&lt;n;i++){</span><br><span class="line">            if(!vis[i] &amp;&amp; cost[i]!=-1){</span><br><span class="line">                if(cost[i] &lt;min){</span><br><span class="line">                    min = cost[i];</span><br><span class="line">                    now=i;</span><br><span class="line">                }</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line">int main(){</span><br><span class="line">    //freopen(&quot;/Users/jy/input.txt&quot;,&quot;r&quot;,stdin);</span><br><span class="line">    memset(n_time,-1,sizeof(n_time));</span><br><span class="line">    memset(n_len,0,sizeof(n_len));</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;n,&amp;m);</span><br><span class="line">    for(int i=0;i&lt;m;i++){</span><br><span class="line">        int x,y,f=0;</span><br><span class="line">        scanf(&quot;%d%d%d&quot;,&amp;x,&amp;y,&amp;f);</span><br><span class="line">        scanf(&quot;%d%d&quot;,&amp;d[x][y],&amp;t[x][y]);</span><br><span class="line">        if(!f){</span><br><span class="line">            d[y][x]=d[x][y];</span><br><span class="line">            t[y][x]=t[x][y];</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    scanf(&quot;%d%d&quot;,&amp;st,&amp;ed);</span><br><span class="line">    Dikja_len(st);</span><br><span class="line">    Dikja_time(st);</span><br><span class="line">    int p=ed;</span><br><span class="line">    while(p!=st){</span><br><span class="line">        s1.push(p);</span><br><span class="line">        p=n_len[p];</span><br><span class="line">    }</span><br><span class="line">    p=ed;</span><br><span class="line">    while(p!=st){</span><br><span class="line">        s2.push(p);</span><br><span class="line">        p=n_time[p];</span><br><span class="line">    }</span><br><span class="line">    if(s1==s2){</span><br><span class="line">        printf(&quot;Distance = %d; Time = %d: %d&quot;,dis[ed],cost[ed],st);</span><br><span class="line">        while(!s1.empty()){</span><br><span class="line">            printf(&quot; -&gt; %d&quot;,s1.top());</span><br><span class="line">            s1.pop();</span><br><span class="line">        }</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">    }</span><br><span class="line">    else{</span><br><span class="line">        printf(&quot;Distance = %d: %d&quot;,dis[ed],st);</span><br><span class="line">        while(!s1.empty()){</span><br><span class="line">            printf(&quot; -&gt; %d&quot;,s1.top());</span><br><span class="line">            s1.pop();</span><br><span class="line">        }</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">        printf(&quot;Time = %d: %d&quot;,cost[ed],st);</span><br><span class="line">        while(!s2.empty()){</span><br><span class="line">            printf(&quot; -&gt; %d&quot;,s2.top());</span><br><span class="line">            s2.pop();</span><br><span class="line">        }</span><br><span class="line">        printf(&quot;\n&quot;);</span><br><span class="line">    }</span><br><span class="line">    return 0;</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/09/1030-Travel-Plan-30/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          1030. Travel Plan (30)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/09/09/1018-Public-Bike-Management-30/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">1018. Public Bike Management (30)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="1111-Online-Map-30" data-title="1111. Online Map (30)" data-url="http://yoursite.com/2016/09/09/1111-Online-Map-30/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+        <div class="footer-left">
+            &copy; 2016 luchujie
+        </div>
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次
+              本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        <div class="footer-right">
+            <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+        </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div id="totop" style="position:fixed;bottom:150px;right:50px;cursor: pointer;">
+<a title="���ض���"><img src="/img/scrollup.png"/></a>
+</div>
+<script src="/js/totop.js"></script>
+
+  </div>
+</body>
+</html>
